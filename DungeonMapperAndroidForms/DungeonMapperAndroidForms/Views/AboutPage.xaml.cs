@@ -1,8 +1,10 @@
-﻿using DungeonMapperAndroidForms.Models;
+﻿using DungeonMapperAndroidForms.Utilities;
+using DungeonMapperStandard.DataAccess;
+using DungeonMapperStandard.Models;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
-using System.IO;
+using System.Linq;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -10,30 +12,31 @@ namespace DungeonMapperAndroidForms.Views
 {
     public partial class AboutPage : ContentPage
     {
-        private FormsMap _map;
+        private DungeonMapperStandard.Models.Map _map;
         private double ButtonClickLength = 5;
 
         public AboutPage()
         {
             InitializeComponent();
-            CheckDatabase();
-            _map = new FormsMap();
-            _map.Initialize();
-            _map.MoveRight();
-            _map.MoveDown();
-            _map.MoveRight();
-        }
+            var appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            DatabaseManager.Initialize(appDataFolder, new DatabaseConnectionHandler());
 
-        private void CheckDatabase()
-        {
-            try
+            var currentMapId = SettingDataAccess.GetSetting<int?>(Setting.CurrentMapId);
+
+            if (currentMapId == null)
             {
-                var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "bluhbluhbluh.txt");
-                File.WriteAllText(path, "asdfasdfaf");
+                _map = new DungeonMapperStandard.Models.Map();
+                _map.Initialize();
+                _map.MoveRight();
+                _map.MoveDown();
+                _map.MoveRight();
+                var mapId = MapDataAccess.SaveMap(_map);
+                SettingDataAccess.SaveSetting(Setting.CurrentMapId, mapId);
             }
-            catch (Exception ex)
+            else
             {
-                var bluh = "asdad";
+                _map = MapDataAccess.GetMaps().First(map => map.Id == currentMapId);
+                _map.LoadData();
             }
         }
 
@@ -69,6 +72,21 @@ namespace DungeonMapperAndroidForms.Views
         {
             Vibration.Vibrate(ButtonClickLength);
             _map.MoveRight();
+            Canvas.InvalidateSurface();
+        }
+
+        private void SaveClick(object sender, EventArgs e)
+        {
+            Vibration.Vibrate(ButtonClickLength);
+            var mapId = MapDataAccess.SaveMap(_map);
+            SettingDataAccess.SaveSetting(Setting.CurrentMapId, mapId);
+        }
+
+        private void ClearClick(object sender, EventArgs e)
+        {
+            Vibration.Vibrate(ButtonClickLength);
+            foreach (var tile in _map.MapData.SelectMany(tileArray => tileArray).Where(tile => tile != null && tile.Traveled))
+                tile.Clear();
             Canvas.InvalidateSurface();
         }
     }

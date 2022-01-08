@@ -18,6 +18,10 @@
 
     <Grid>
         <skia:SKCanvasView x:Name="Canvas" PaintSurface="OnPaintSurface"/>
+        <StackLayout Orientation="Vertical" VerticalOptions="Start" HorizontalOptions="End">
+            <Button Text="Save" Clicked="SaveClick" Margin="10"/>
+            <Button Text="Clear" Clicked="ClearClick" Margin="10"/>
+        </StackLayout>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,50">
             <Button Text="Left" Clicked="LeftClick" VerticalOptions="Center"/>
             <StackLayout Orientation="Vertical">
