@@ -1,0 +1,8 @@
+﻿# common visual studio ignores
+/.vs
+/DungeonMapperAndroidForms/DungeonMapperAndroidForms/bin
+/DungeonMapperAndroidForms/DungeonMapperAndroidForms/obj
+/DungeonMapperAndroidForms/DungeonMapperAndroidForms/DungeonMapperAndroidForms.csproj.user
+/DungeonMapperAndroidForms/DungeonMapperAndroidForms.Android/bin
+/DungeonMapperAndroidForms/DungeonMapperAndroidForms.Android/obj
+/DungeonMapperAndroidForms/DungeonMapperAndroidForms.Android/DungeonMapperAndroidForms.Android.csproj.user

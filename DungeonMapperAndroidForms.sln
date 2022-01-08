@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonMapperAndroidForms.Android", "DungeonMapperAndroidForms\DungeonMapperAndroidForms.Android\DungeonMapperAndroidForms.Android.csproj", "{9654F97C-ABB0-42CB-8B2E-433C8E2872F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonMapperAndroidForms", "DungeonMapperAndroidForms\DungeonMapperAndroidForms\DungeonMapperAndroidForms.csproj", "{873E281A-0CC4-4A07-BAE1-DFA75E1A78FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DungeonMapperStandard", "..\..\Users\jello\source\repos\DungeonMapper2\DungeonMapperStandard\DungeonMapperStandard.csproj", "{8D899EDC-2C25-478B-8712-41212D1EAEB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9654F97C-ABB0-42CB-8B2E-433C8E2872F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9654F97C-ABB0-42CB-8B2E-433C8E2872F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9654F97C-ABB0-42CB-8B2E-433C8E2872F3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9654F97C-ABB0-42CB-8B2E-433C8E2872F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9654F97C-ABB0-42CB-8B2E-433C8E2872F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9654F97C-ABB0-42CB-8B2E-433C8E2872F3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{873E281A-0CC4-4A07-BAE1-DFA75E1A78FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{873E281A-0CC4-4A07-BAE1-DFA75E1A78FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{873E281A-0CC4-4A07-BAE1-DFA75E1A78FF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{873E281A-0CC4-4A07-BAE1-DFA75E1A78FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{873E281A-0CC4-4A07-BAE1-DFA75E1A78FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{873E281A-0CC4-4A07-BAE1-DFA75E1A78FF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8D899EDC-2C25-478B-8712-41212D1EAEB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D899EDC-2C25-478B-8712-41212D1EAEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D899EDC-2C25-478B-8712-41212D1EAEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D899EDC-2C25-478B-8712-41212D1EAEB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B533E605-21C5-4DB8-88B8-959B0DB3116A}
+	EndGlobalSection
+EndGlobal
