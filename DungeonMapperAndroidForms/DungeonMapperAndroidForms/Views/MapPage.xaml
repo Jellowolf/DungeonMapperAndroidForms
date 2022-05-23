@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DungeonMapperAndroidForms.Views.AboutPage"
+             x:Class="DungeonMapperAndroidForms.Views.MapPage"
              xmlns:vm="clr-namespace:DungeonMapperAndroidForms.ViewModels"
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              Title="{Binding Title}">
 
     <ContentPage.BindingContext>
-        <vm:AboutViewModel />
+        <vm:MapViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>

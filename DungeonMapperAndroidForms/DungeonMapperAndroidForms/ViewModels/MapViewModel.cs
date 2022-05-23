@@ -5,11 +5,11 @@ using Xamarin.Forms;
 
 namespace DungeonMapperAndroidForms.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class MapViewModel : BaseViewModel
     {
-        public AboutViewModel()
+        public MapViewModel()
         {
-            Title = "About";
+            Title = "Dungeon Mapper";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 

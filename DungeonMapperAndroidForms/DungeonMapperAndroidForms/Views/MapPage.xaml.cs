@@ -10,12 +10,12 @@ using Xamarin.Forms;
 
 namespace DungeonMapperAndroidForms.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class MapPage : ContentPage
     {
         private DungeonMapperStandard.Models.Map _map;
         private double ButtonClickLength = 5;
 
-        public AboutPage()
+        public MapPage()
         {
             InitializeComponent();
             var appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
